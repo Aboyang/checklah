@@ -1,16 +1,16 @@
 {
     "name": "CheckLah",
     "short_name": "CheckLah",
-    "start_url": "/checklah/index.html",
+    "start_url": "index.html",
     "scope": "./",
     "icons": [
     {
-        "src": "/checklah/icons.png",
+        "src": "icons.png",
         "sizes": "192x192",
         "type": "image/png"
     },
     {
-        "src": "/checklah/icons.png",
+        "src": "icons.png",
         "sizes": "512x512",
         "type": "image/png"
     }
