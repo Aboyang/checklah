@@ -2,7 +2,7 @@ const input = document.getElementById('fileInput')
 const textInput = document.getElementById('textInput')
 const output = document.getElementById('output')
 
-// Uploading Filea
+// Uploading File
 input.addEventListener('change', () => {
     const fileName = input.files[0].name.length > 0 ? input.files[0].name : 'No file selected'
     document.getElementById('fileName').textContent = fileName
@@ -41,6 +41,7 @@ async function textOnly(textInput) {
     const misCard = document.getElementById('misleading-card')
     const finCard = document.getElementById('final-score-container')
 
+
     if (sentiment == 0) {senCard.style.backgroundColor = "lightgreen"}
     else if (sentiment > 0 && sentiment < 0.5) {senCard.style.backgroundColor = "palegoldenrod"} 
     else {senCard.style.backgroundColor = "indianred"}
@@ -57,18 +58,21 @@ async function textOnly(textInput) {
     else if (misleading > 0 && misleading < 0.5) {misCard.style.backgroundColor = "palegoldenrod"} 
     else {misCard.style.backgroundColor = "indianred"}
 
-    const remark = document.getElementById('remark')
+    const remarkText = document.getElementById('remark-text')
+
+    remarkText.style.display = "block"
+
     if (NLPFinal < 0.2) {
         finCard.style.backgroundColor = "lightgreen"
-        remark.innerText = "Should be safe, proceed with caution."
+        remarkText.innerText = "Should be safe, proceed with caution."
     }
     else if (NLPFinal < 0.6) {
         finCard.style.backgroundColor = "palegoldenrod"
-        remark.innerText = "Likely to be fake."
+        remarkText.innerText = "Likely to be fake."
     } 
     else {
         finCard.style.backgroundColor = "indianred"
-        remark.innerText = "Highly likely to be fake."
+        remarkText.innerText = "Highly likely to be fake."
     }
 
 
