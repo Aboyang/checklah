@@ -41,6 +41,8 @@ h1 {
 
     background-color: brown;
 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     font-size: 1.2em;
     color: white;
   
@@ -228,7 +230,7 @@ h1 {
 .text-output .final-score-container {
     width: 80%;
 }
-.text-output > div > .remark {
+.text-output > div > .remark-text {
     text-align: center;
     font-size: 0.75em;
 }
