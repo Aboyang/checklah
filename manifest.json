@@ -5,12 +5,12 @@
     "scope": "./",
     "icons": [
     {
-        "src": "Checklah-logo.png",
+        "src": "icons.png",
         "sizes": "192x192",
         "type": "image/png"
     },
     {
-        "src": "Checklah-logo.png",
+        "src": "icons.png",
         "sizes": "512x512",
         "type": "image/png"
     }
