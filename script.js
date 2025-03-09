@@ -26,7 +26,7 @@ async function textOnly(textInput) {
     const readability = parseFloat((Math.abs(NLPResult.Readability_Score - 0.5) / 0.5).toFixed(2))
     const misleading = parseFloat((NLPResult.FB_Bart_Model).toFixed(2))
 
-    const NLPFinal = ((0.3 * sentiment + 0.25 * subjectivity + 0.3 * readability + 0.3 * misleading).toFixed(2))
+    const NLPFinal = ((0.3 * sentiment + 0.1 * subjectivity + 0.3 * readability + 0.3 * misleading).toFixed(2))
 
     document.getElementById('sentimentOutput').innerText = `${(sentiment * 100).toFixed(0)}%`
     document.getElementById('subjectivityOutput').innerText = `${(subjectivity * 100).toFixed(0)}%`
