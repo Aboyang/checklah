@@ -24,7 +24,7 @@ async function textOnly(textInput) {
     const sentiment = parseFloat(Math.min(Math.abs(NLPResult.Sentiment_Score), 1).toFixed(2))
     const subjectivity = parseFloat((NLPResult.Subjectivity_Score).toFixed(2)) / 2
     const readability = parseFloat((Math.abs(NLPResult.Readability_Score - 0.5) / 0.5).toFixed(2))
-    const misleading = parseFloat((NLPResult.FB_Bart_Model).toFixed(2))
+    const misleading = parseFloat((NLPResult.FB_Bart_Model).toFixed(2)) / 2
 
     const NLPFinal = ((0.3 * sentiment + 0.1 * subjectivity + 0.3 * readability + 0.3 * misleading).toFixed(2))
 
