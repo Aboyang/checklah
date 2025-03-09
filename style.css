@@ -1,0 +1,222 @@
+body {
+    background-color: bisque;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1 {
+    margin: 0
+}
+
+.submission {
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    /* background-color: bisque; */
+}
+
+.text-input {
+
+    background-color: brown;
+
+    font-size: 1.2em;
+    color: white;
+  
+    display: flex;
+    align-items: center;
+
+    height: 40px;
+    width: 280px;
+
+    text-align: center;
+
+
+    border: none;
+    border-radius: 12px;
+
+}
+
+.text-input::placeholder {
+    color: #ddd
+}
+
+.hidden-input {
+    display: none; /* Hide default input */
+}
+  
+.custom-file-button {
+    height: 40px;
+    width: 280px;
+    font-size: 1.2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+  
+.custom-file-button:hover {
+    background-color: rgb(172, 102, 102);
+}
+  
+#fileName {
+
+    height: 20px;
+    font-size: 0.8em;
+
+    color: black;
+    border: none;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.analyze {
+    height: 40px;
+    width: 280px;
+    font-size: 1.2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 12px;
+     
+}
+
+.analyze:hover {
+    background-color: rgb(172, 102, 102);
+}
+
+.divider {
+    width: 275px;
+    border: 1px solid burlywood;
+    margin-bottom: 28px;
+}
+
+.result {
+    width: 100%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* Non-text */
+.non-text-output {
+    position: relative;
+    top: 0;
+
+    width: 60%;
+
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 4px;
+}
+
+.non-text-output > div {
+    width: 40%;
+    height: 100px;
+    background-color: #ddd;
+    
+    font-size: 1.5em;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 12px;
+    
+}
+
+.non-text-output > div > p {
+    font-size: 1.4em;
+    margin: 0;
+}
+
+.non-text-output > div > .output-title {
+    font-size: 0.75em;
+}
+
+.non-text-output .remark {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+/* Text */
+.text-output {
+    position: relative;
+    top: 0;
+
+    width: 60%;
+
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 4px;
+}
+
+.text-output > div {
+    width: 40%;
+    height: 100px;
+    background-color: #ddd;
+    
+    font-size: 1.5em;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 12px;
+}
+
+.text-output > div > p {
+    font-size: 1.4em;
+    margin: 0;
+}
+
+.text-output > div > .output-title {
+    font-size: 0.75em;
+}
+
+.text-output > div > .final-score {
+    font-size: 1.8em;
+}
+
+.text-output .final-score-container {
+    width: 80%;
+}
+.text-output > div > .remark {
+    text-align: center;
+    font-size: 0.75em;
+}

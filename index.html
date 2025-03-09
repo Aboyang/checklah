@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Checklah-logo.png" type="image/x-png">
+    <title>CheckLah</title>
+</head>
+<body>
+    <div class="submission">
+
+        <h1>CheckLah🧐</h1>
+        <p>Find out if it is false information.</p>
+        <input type="text" id="textInput" class="text-input" placeholder="Paste Text">
+        <div>or</div>
+        <input type="file" id="fileInput" class="hidden-input" accept="image/*" required>
+        <label for="fileInput" class="custom-file-button">Upload Image</label>
+        <span id="fileName">No file selected</span>
+        
+        <button class="analyze" type="submit" onclick=analyze()>Analyze</button>
+
+        <div id="output"></div>
+
+    </div>
+
+    <hr class="divider">
+
+    <div class="result">
+
+        <div class="non-text-output" id="non-text-output">
+            <div id="AI-card">
+                <p class="output-title">AI Generated</p>
+                <p id="AIOutput">0%</p>
+            </div>
+            <div id="deepfake-card">
+                <p class="output-title">Deepfake</p>
+                <p id="deepfakeOutput">0%</p>
+            </div>
+                
+            <p class="remark" id="remark"></p>
+
+        </div>
+
+        <div class="text-output" id="text-output">
+            <div id="sentiment-card">
+                <p class="output-title">Sentiment</p>
+                <p id="sentimentOutput">0%</p>
+            </div>
+            <div id="subjectivity-card">
+                <p class="output-title">Subjectivity</p>
+                <p id="subjectivityOutput">0%</p>
+            </div>
+            <div id="readability-card">
+                <p class="output-title">Readability</p>
+                <p id="readabilityOutput">0%</p>
+            </div>
+            <div id="misleading-card">
+                <p class="output-title">Misleading</p>
+                <p id="misleadingOutput">0%</p>
+            </div>
+            <div class="final-score-container" id="final-score-container">
+                <p class="final-score" id="NLPFinal">0%</p>
+                <p class="remark" id="remark">Likely fake, please be careful</p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/tesseract.js@2.1.5"></script>
+
+</body>
+</html>
