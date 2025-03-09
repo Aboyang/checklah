@@ -26,13 +26,13 @@ async function textOnly(textInput) {
     const readability = parseFloat((Math.abs(NLPResult.Readability_Score - 0.5) / 0.5).toFixed(2))
     const misleading = parseFloat((NLPResult.FB_Bart_Model).toFixed(2))
 
-    const NLPFinal = ((0.2 * sentiment + 0.3 * subjectivity + 0.2 * readability + 0.3 * misleading).toFixed(2))
+    const NLPFinal = ((0.25 * sentiment + 0.25 * subjectivity + 0.2 * readability + 0.3 * misleading).toFixed(2))
 
-    document.getElementById('sentimentOutput').innerText = `${sentiment * 100}%`
-    document.getElementById('subjectivityOutput').innerText = `${subjectivity * 100}%`
-    document.getElementById('readabilityOutput').innerText = `${readability * 100}%`
-    document.getElementById('misleadingOutput').innerText = `${misleading * 100}%`
-    document.getElementById('NLPFinal').innerText = NLPFinal
+    document.getElementById('sentimentOutput').innerText = `${(sentiment * 100).toFixed(0)}%`
+    document.getElementById('subjectivityOutput').innerText = `${(subjectivity * 100).toFixed(0)}%`
+    document.getElementById('readabilityOutput').innerText = `${(readability * 100).toFixed(0)}%`
+    document.getElementById('misleadingOutput').innerText = `${(misleading * 100).toFixed(0)}%`
+    document.getElementById('NLPFinal').innerText = `${(NLPFinal * 100).toFixed(0)}%`
     output.innerText = ""
 
     const senCard = document.getElementById('sentiment-card')
@@ -74,8 +74,6 @@ async function textOnly(textInput) {
 
 }
 
-
-
 // OCR for Text Extraction
 async function extractText() {
 
@@ -111,8 +109,8 @@ async function extractText() {
             output.innerText = ""
 
             // display on UI
-            document.getElementById('AIOutput').innerText = `${parseFloat(AIScore) * 100}%`
-            document.getElementById('deepfakeOutput').innerText = `${parseFloat(deepfakeScore) * 100}%`
+            document.getElementById('AIOutput').innerText = `${(parseFloat(AIScore) * 100).toFixed(0)}%`
+            document.getElementById('deepfakeOutput').innerText = `${(parseFloat(deepfakeScore) * 100).toFixed(0)}%`
             
             const AIcard = document.getElementById('AI-card')
             const deepfakeCard = document.getElementById('deepfake-card')
