@@ -219,7 +219,7 @@ async function checkAI(inputFile) {
 
 async function NLPServer(text) {
     try {
-        let response = await fetch("http://localhost:3001/analyze", {
+        let response = await fetch("https://checklah-server.onrender.com/analyze", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text: text })
